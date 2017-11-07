@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 
 
 
-import {ListGroupItem,ListGroup, Form, FormControl, Button, MenuItem } from 'react-bootstrap';
+import {ListGroupItem,ListGroup, Form, FormControl, Button, Grid, Row, Col } from 'react-bootstrap';
 
 //TO-DO refactor, is not even a single single bar here...
 
@@ -63,9 +63,13 @@ class MainApp extends React.Component {
                     <Button bsStyle='primary' onClick={()=> this.handleClick() }> Ok </Button>
                     <Button bsStyle='primary' onClick={()=> this.handleClear()}> x </Button>
                 </Form>
-                <ListGroup>
-                    <StationList stations={this.state.station} />
-                </ListGroup>
+                <Grid>
+                    <Row>
+                        <Col className = 'station' sm = {6} md={4}>
+                                <StationList stations={this.state.station} />
+                        </Col>
+                    </Row>
+                </Grid>
             </div>
         )
     }
