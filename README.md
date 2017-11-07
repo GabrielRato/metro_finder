@@ -8,14 +8,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+
+
+```
 sudo apt-get install -y nodejs
 sudo npm install -g create-react-app
 sudo npm install react-bootstrap --save
-sudo npm install bootstrap@3 --save
-
-```
-Give examples
-```
+sudo npm install bootstrap@3 --save```
 
 * [React](http://www.react.com) - The web framework used
 
