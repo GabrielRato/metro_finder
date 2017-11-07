@@ -18,7 +18,7 @@ sudo npm install react-bootstrap --save
 sudo npm install bootstrap@3 --save```
 ```
 
-* [React](http://www.react.com) - The web framework used
+* [React](https://reactjs.org/) - The web framework used
 
 
 ## Contributing
