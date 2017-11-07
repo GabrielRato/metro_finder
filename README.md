@@ -15,6 +15,7 @@ sudo apt-get install -y nodejs
 sudo npm install -g create-react-app
 sudo npm install react-bootstrap --save
 sudo npm install bootstrap@3 --save```
+```
 
 * [React](http://www.react.com) - The web framework used
 
