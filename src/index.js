@@ -20,6 +20,10 @@ function StationItem(props){
 
 }
 
+function LoadStations(props){
+    var v = [1,2,3,4,5];
+    return v;
+}
 
 class MainApp extends React.Component {
     constructor(props){
@@ -31,16 +35,20 @@ class MainApp extends React.Component {
         };
     }
 
-    handleSubmit(e) {
+    handleSubmit(e, vetor) {
+        //Here we'll call an API
+        var vetor = LoadStations(1);
         e.preventDefault();
-        const newItem={
-            text: 'item 1',
-            id: Date.now()
-        };
-        console.log(newItem);
-        this.setState(prevState=> ({
-            station: prevState.station.concat(newItem),
-        }));
+        for (let i = 0; i < 5; i++) {
+            const newItem={
+                text: vetor[i],
+                id: Date.now()
+            };
+            console.log(newItem);
+            this.setState(prevState=> ({
+                station: prevState.station.concat(newItem),
+            }));
+        }
     }
 
     handleClick(){
@@ -60,10 +68,10 @@ class MainApp extends React.Component {
                     <FormControl
                         className='input-search'
                     />
-                    <Button bsStyle='primary' onClick={()=> this.handleClick() }> Ok </Button>
+                    <Button bsStyle='primary' onClick={()=> this.handleSubmit(event) }> Ok </Button>
                     <Button bsStyle='primary' onClick={()=> this.handleClear()}> x </Button>
                 </Form>
-                <Grid>
+                <Grid className='items-station'>
                     <Row>
                         <Col className = 'station' sm = {6} md={4}>
                                 <StationList stations={this.state.station} />

@@ -1,4 +1,16 @@
 
+.items-station{
+    background: aliceblue!important
+}
+
+.upnav{
+    background: darkblue
+}
+
+html{
+    background: aliceblue
+}
+
 .station {
     margin: 5px;
     margin-left: 350px;
